@@ -1,4 +1,4 @@
-#Blockchain
+# Blockchain
 
 
 Safety comes mostly from this line:
@@ -8,7 +8,7 @@ Safety comes mostly from this line:
 ```
 The next block typically saves the correct hash of the block we want to attack
 
-####Setting Current previousHash to Hash of Previous Block
+#### Setting Current previousHash to Hash of Previous Block
 ```js
         saveTheIdea.chain[index].hash = saveTheIdea.chain[index+1].previousHash;
 ```
@@ -20,7 +20,7 @@ The next block typically saves the correct hash of the block we want to attack
                 return false;
             }
 ```
-####Setting Current Hash to PreviousHash of Next Block
+#### Setting Current Hash to PreviousHash of Next Block
 ```js
         saveTheIdea.chain[index].hash = saveTheIdea.chain[index+1].previousHash;
 ```
