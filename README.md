@@ -1,4 +1,4 @@
-# Blockchain
+# My Blockchain Sample
 
 
 Safety comes mostly from this line:
@@ -31,3 +31,5 @@ The next block typically saves the correct hash of the block we want to attack
                 return false;
             }
 ```
+
+Obviously, this is just a proof of concept. Other activities related to a blockchain are not included.
