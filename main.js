@@ -62,20 +62,20 @@ class Blockchain {
 }
 
 ////////////////////////////////////////////////////////////////
-let saveTheIdea = new Blockchain();
-saveTheIdea.addBlock(new Block(1, "02/08/2017", { amount: 4 }));
-saveTheIdea.addBlock(new Block(2, "04/08/2017", { amount: 10 }));
+let saveTheCoins = new Blockchain();
+saveTheCoins.addBlock(new Block(1, "02/08/2017", { amount: 4 }));
+saveTheCoins.addBlock(new Block(2, "04/08/2017", { amount: 10 }));
 
-console.log(JSON.stringify(saveTheIdea, null, 4));
+console.log(JSON.stringify(saveTheCoins, null, 4));
 
-console.log('Is the blockchain valid? ' + saveTheIdea.isChainValid());
+console.log('Is the blockchain valid? ' + saveTheCoins.isChainValid());
 //let's tamper with the block
 index = 1;
-saveTheIdea.chain[index].data = {amount: 100};
-saveTheIdea.chain[index].hash = saveTheIdea.chain[index].calculateHash();
-saveTheIdea.chain[index].previousHash = saveTheIdea.chain[index-1].hash;
-saveTheIdea.chain[index].hash = saveTheIdea.chain[index+1].previousHash;
+saveTheCoins.chain[index].data = {amount: 100};
+saveTheCoins.chain[index].hash = saveTheCoins.chain[index].calculateHash();
+saveTheCoins.chain[index].previousHash = saveTheCoins.chain[index-1].hash;
+saveTheCoins.chain[index].hash = saveTheCoins.chain[index+1].previousHash;
 
-console.log(JSON.stringify(saveTheIdea, null, 4));
+console.log(JSON.stringify(saveTheCoins, null, 4));
 
-console.log('Is the blockchain valid? ' + saveTheIdea.isChainValid());
+console.log('Is the blockchain valid? ' + saveTheCoins.isChainValid());
